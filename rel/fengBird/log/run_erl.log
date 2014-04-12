@@ -1,0 +1,8 @@
+run_erl [39348] Sat Apr 12 15:59:20 2014
+Args before exec of shell:
+run_erl [39348] Sat Apr 12 15:59:20 2014
+argv[0] = sh
+run_erl [39348] Sat Apr 12 15:59:20 2014
+argv[1] = -c
+run_erl [39348] Sat Apr 12 15:59:20 2014
+argv[2] = exec /Users/admaster/codeProject/erl_study/fengBird/rel/fengBird/bin/fengBird console '' 

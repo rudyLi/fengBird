@@ -1,0 +1,75 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+<title>.eunit/fengBird_server.COVER.html</title>
+</head><body style='background-color: white; color: black'>
+<pre>
+File generated from /Users/admaster/codeProject/erl_study/fengBird/.eunit/fengBird_server.erl by COVER 2014-04-12 at 15:49:57
+
+****************************************************************************
+
+        |  -module(fengBird_server).
+        |  -behaviour(gen_server).
+        |  -define(SERVER, ?MODULE).
+        |  
+        |  %% ------------------------------------------------------------------
+        |  %% API Function Exports
+        |  %% ------------------------------------------------------------------
+        |  
+        |  -export([start_link/0, hello/0]).
+        |  
+        |  %% ------------------------------------------------------------------
+        |  %% gen_server Function Exports
+        |  %% ------------------------------------------------------------------
+        |  
+        |  -export([init/1, handle_call/3, handle_cast/2, handle_info/2,
+        |           terminate/2, code_change/3]).
+        |  
+        |  %% ------------------------------------------------------------------
+        |  %% API Function Definitions
+        |  %% ------------------------------------------------------------------
+        |  
+        |  start_link() -&gt;
+     1..|      gen_server:start_link({local, ?SERVER}, ?MODULE, [], []).
+        |  
+        |  %% @doc just a test
+        |  hello() -&gt;
+<font color=red>     0..|      gen_server:cast(?SERVER, 'hello').</font>
+        |  
+        |  %% ------------------------------------------------------------------
+        |  %% gen_server Function Definitions
+        |  %% ------------------------------------------------------------------
+        |  
+        |  init(Args) -&gt;
+     1..|      {ok, Args}.
+        |  
+        |  handle_call(_Request, _From, State) -&gt;
+<font color=red>     0..|      {reply, ok, State}.</font>
+        |  
+        |  handle_cast('hello', State) -&gt;
+<font color=red>     0..|      io:format("hello world~n"),</font>
+<font color=red>     0..|      {noreply, State};</font>
+        |  
+        |  handle_cast(_Msg, State) -&gt;
+<font color=red>     0..|      {noreply, State}.</font>
+        |  
+        |  handle_info(_Info, State) -&gt;
+<font color=red>     0..|      {noreply, State}.</font>
+        |  
+        |  terminate(_Reason, _State) -&gt;
+<font color=red>     0..|      ok.</font>
+        |  
+        |  code_change(_OldVsn, State, _Extra) -&gt;
+<font color=red>     0..|      {ok, State}.</font>
+        |  
+        |  %% ------------------------------------------------------------------
+        |  %% Internal Function Definitions
+        |  %% ------------------------------------------------------------------
+        |  
+        |  -ifdef(TEST).
+        |  -include("fengBird_test.hrl").
+        |  -endif.
+</pre>
+</body>
+</html>

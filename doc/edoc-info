@@ -1,0 +1,4 @@
+%% encoding: UTF-8
+{application,fengBird}.
+{packages,[]}.
+{modules,[fengBird_app,fengBird_server,fengBird_sup]}.
